@@ -1,0 +1,24 @@
+{
+  "name": "becode-messenger",
+  "version": "1.0.0",
+  "description": "* Projet de groupe avec Frédérick Van Isschot, Enzo Buono, Cindy Buchet et Cléo Buck.\r * Formation: BeCode\r * Du 11 juillet jusqu'à une date indéterminée\r * HTML, CSS et NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "demon": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fred-Vaniss/becode-messenger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fred-Vaniss/becode-messenger/issues"
+  },
+  "homepage": "https://github.com/Fred-Vaniss/becode-messenger#readme",
+  "dependencies": {
+    "mongodb": "^3.2.7",
+    "socket.io": "^2.2.0"
+  }
+}
