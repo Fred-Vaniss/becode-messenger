@@ -1,7 +1,7 @@
 const mongo = require('mongoose');
 const client = require('socket.io').listen(4000).sockets;
 
-const dbUrl = 'mongodb+srv://svg93:mongole@mongochat-ini1u.mongodb.net/test?retryWrites=true&w=majority'
+const dbUrl = 'mongodb+srv://svg93:mongole@mongochat-ini1u.mongodb.net/chat?retryWrites=true&w=majority'
 
 
 // Connection à mongo
@@ -17,8 +17,8 @@ db.once('open',() => {
     console.log('MongoDB connected...')
 
     // Connection à Socket.io
-    client.on('connection', () => {
-        let chat = db.collection('chats')
+    client.on('connection', socket => {
+        let chat = db.collection('mongo_chat')
 
         // Création fonction pour envoyer le status
         const sendStatus = s => {
