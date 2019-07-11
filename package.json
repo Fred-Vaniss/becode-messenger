@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Fred-Vaniss/becode-messenger#readme",
   "dependencies": {
     "mongodb": "^3.2.7",
+    "mongoose": "^5.6.4",
     "socket.io": "^2.2.0"
   }
 }
