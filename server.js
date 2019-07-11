@@ -1,5 +1,10 @@
+// const PORT = 5500;
+
 const mongo = require('mongoose');
-const client = require('socket.io').listen(4000).sockets;
+const client = require('socket.io').listen(8080);
+// const server = require('http').createServer();
+
+// server.listen(PORT);
 
 const dbUrl = 'mongodb+srv://svg93:mongole@mongochat-ini1u.mongodb.net/chat?retryWrites=true&w=majority'
 
@@ -11,9 +16,6 @@ let db = mongo.connection
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open',() => {
-    
-    
-
     console.log('MongoDB connected...')
 
     // Connection à Socket.io
@@ -65,3 +67,4 @@ db.once('open',() => {
         })
     })
 });
+
